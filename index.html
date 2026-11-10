@@ -103,6 +103,37 @@ h3 em { font-family: var(--f-en); font-size: 20px; letter-spacing: 0; color: var
 .founder .name em { font-family: var(--f-en); font-size: 24px; letter-spacing: 0; margin-left: 8px; }
 .founder .role { font-family: var(--f-en); font-size: 17px; color: var(--leaf-deep); margin: 2px 0 14px; letter-spacing: .02em; }
 
+/* visit: Blue Sheep story + 3x3 photo puzzle */
+.puzzle { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin: 0 0 40px; padding: 0; list-style: none; border-radius: 6px; overflow: hidden; box-shadow: 0 10px 30px rgba(90, 70, 40, .12); }
+.puzzle li { aspect-ratio: 1 / 1; background: var(--rule); overflow: hidden; }
+.puzzle img { display: block; width: 100%; height: 100%; object-fit: cover; color: transparent; font-size: 0; }
+.story > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 12px; width: fit-content; margin: 0 auto; padding: 10px 22px; border: 1px solid var(--leaf); border-radius: 999px; color: var(--ink); background: transparent; font-size: 15px; letter-spacing: .12em; user-select: none; }
+.story > summary::-webkit-details-marker { display: none; }
+.story > summary:hover { background: rgba(214, 230, 166, .3); }
+.story > summary em { font-family: var(--f-en); font-size: 18px; letter-spacing: 0; color: var(--ink-soft); }
+.story > summary .chev { width: 18px; height: 18px; flex: none; color: var(--leaf-deep); transition: transform .3s; }
+.story[open] > summary .chev { transform: rotate(180deg); }
+.story[open] > summary { margin-bottom: 40px; }
+.story .on-open { display: none; }
+.story[open] .on-open { display: inline; }
+.story[open] .on-closed { display: none; }
+.puzzle-cap { text-align: center; font-size: 14px; color: var(--ink-soft); margin: -22px 0 40px; }
+.puzzle-cap .en { display: block; font-size: 16px; margin: 0; }
+.pull { margin: 28px 0; padding: 4px 0 4px 20px; border-left: 2px solid var(--leaf); }
+.pull .zh { font-size: 18px; letter-spacing: .12em; font-weight: 400; }
+.mission { list-style: none; padding: 0; margin: 0; }
+.mission li { padding-left: 1.4em; position: relative; }
+.mission li::before { content: "◦"; position: absolute; left: 0; color: var(--leaf-deep); }
+.mission li + li { margin-top: 16px; }
+.mission .zh { margin: 0; }
+
+/* visit: Tianyun photo mosaic */
+.tiles { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px; margin: 0 0 40px; padding: 0; list-style: none; border-radius: 6px; overflow: hidden; box-shadow: 0 10px 30px rgba(90, 70, 40, .12); }
+.tiles li { background: var(--rule); overflow: hidden; grid-column: span 2; aspect-ratio: 4 / 3; }
+.tiles li.tall { grid-column: span 3; aspect-ratio: 3 / 4; }
+.tiles li.wide { grid-column: span 3; }
+.tiles img { display: block; width: 100%; height: 100%; object-fit: cover; color: transparent; font-size: 0; }
+
 /* contact */
 .center { text-align: center; }
 .partner-list { list-style: none; padding: 0; margin: 0 auto; max-width: 30em; text-align: center; }
@@ -183,6 +214,7 @@ footer small { display: block; margin-top: 10px; font-size: 12px; letter-spacing
     <a class="brand" href="#top"><b>Enso Initiative</b><small>应手</small></a>
     <nav class="links" aria-label="Sections">
       <a href="#works">Works<span>作品</span></a>
+      <a href="#visit">Visit<span>探访</span></a>
       <a href="#about">About<span>关于</span></a>
       <a href="#contact">Contact<span>联系</span></a>
     </nav>
@@ -235,6 +267,137 @@ footer small { display: block; margin-top: 10px; font-size: 12px; letter-spacing
           </div>
         </div>
       </article>
+    </div>
+  </section>
+
+  <svg class="meadow" aria-hidden="true"><use href="#meadow"/></svg>
+
+  <section class="block" id="visit">
+    <div class="wrap">
+      <div class="head"><span class="label">Visit</span><h2>探访岩羊</h2></div>
+
+      <ul class="puzzle" aria-label="岩羊 Blue Sheep 小店的九张照片 / Nine photos from the Blue Sheep shop">
+        <li><img src="bluesheep-1.jpg" alt="挂着“WELCOME TO BLUESHEEP 欢迎来岩羊”木牌的花架门 / The flowering wooden gate with the Welcome to Blue Sheep sign" loading="lazy"></li>
+        <li><img src="bluesheep-2.jpg" alt="“岩羊 好开心认识你”的招牌和钩织小动物、向日葵 / The greeting sign with crocheted animals and sunflowers" loading="lazy"></li>
+        <li><img src="bluesheep-3.jpg" alt="挂着黑板菜单的柜台 / The counter with chalkboard menus" loading="lazy"></li>
+        <li><img src="bluesheep-4.jpg" alt="墙上挂着的手工毛毡包 / Handmade felt bags on the wall" loading="lazy"></li>
+        <li><img src="bluesheep-5.jpg" alt="布编花环和手艺人的名片照片墙 / A fabric wreath and the wall of maker portraits" loading="lazy"></li>
+        <li><img src="bluesheep-6.jpg" alt="贴着手艺人照片名片的耳环展示 / Earrings displayed beside a maker's card" loading="lazy"></li>
+        <li><img src="bluesheep-7.jpg" alt="挂满彩色背带的毛毡斜挎包 / Felt shoulder bags with colorful straps" loading="lazy"></li>
+        <li><img src="bluesheep-8.jpg" alt="蓝染和皮革小动物挂件 / Indigo-dyed and leather animal charms" loading="lazy"></li>
+        <li><img src="bluesheep-9.jpg" alt="桌上叠放的留言册 / A stack of guest notebooks on a table" loading="lazy"></li>
+      </ul>
+      <p class="puzzle-cap zh">岩羊 Blue Sheep 小店里的九个角落<span class="en">Nine corners of the Blue Sheep shop</span></p>
+
+      <details class="story">
+      <summary>
+        <span class="on-closed">点击了解岩羊的故事 <em>Read the Blue Sheep story</em></span>
+        <span class="on-open">收起 <em>Close</em></span>
+        <svg class="chev" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg>
+      </summary>
+
+      <div class="pair">
+        <p class="zh">岩羊 Blue Sheep 是一家遵循公平贸易的可持续型社会企业。它把残障等弱势群体的手工艺人，和本地与全球的市场连在一起，用这种方式守护中国的文化遗产。我们在做应手的时候，常常想起这家小店。</p>
+        <p class="en">Blue Sheep is a fair-trade, sustainable social enterprise. It connects artisans from vulnerable groups, including people with disabilities, with local and global markets, and in doing so helps protect China's cultural heritage. We often think of this little shop while building Enso Initiative.</p>
+      </div>
+
+      <div class="sub">
+        <h3>创始人 Rachel<em>The founder</em></h3>
+        <div class="pair">
+          <p class="zh">岩羊的创始人 Rachel 是一位英国奶奶，曾是行走在喜马拉雅山脉的“无国界医生”。她年轻时就致力于帮助那些得不到医疗服务的人，在 15 个国家做过医疗工作，也培训当地的乡村医生。这些经历让她看到极度贫困、没有选择的人是怎样生活的，也让她明白：想改善他们的健康，一个重要的办法是减轻他们的经济压力。</p>
+          <p class="en">Rachel, a grandmother from England, was once a “doctor without borders” walking the Himalayas. From a young age she worked to help people with no access to healthcare, practicing in 15 countries and training village doctors along the way. It showed her how people live in extreme poverty with no choices, and taught her that one of the most important ways to improve their health is to ease their financial strain.</p>
+        </div>
+        <div class="pair">
+          <p class="zh">后来她参与了汶川大地震的救灾，并用自己的积蓄创办了 Blue Sheep，帮助灾区和其他需要帮助的人。走进岩羊那扇开着花的木门，第一眼就能看到 Rachel 的照片，旁边写着：“用小爱做大事”。2025 年 4 月，Rachel 因病回到英国老家，现在小店由其他店员接着运营。</p>
+          <p class="en">She later took part in the relief work after the Wenchuan earthquake and founded Blue Sheep with her own savings, to help the disaster area and others in need. Past the flowering wooden gate, the first thing you see is a photo of Rachel, with the words “Do big things with small love.” In April 2025 Rachel returned to her home in England because of illness, and the shop is now run by other staff.</p>
+        </div>
+      </div>
+
+      <div class="sub">
+        <h3>使命<em>Their mission</em></h3>
+        <p class="zh" style="margin-bottom:14px">小店的小册子会发给每一位进门的顾客，上面写着他们的使命：</p>
+        <ul class="mission">
+          <li>
+            <p class="zh">促进创新：购买残障人士和其他弱势群体的手工产品，再以公平的价格卖出，改善他们的健康和生计。</p>
+            <p class="en">Encourage innovation: buy products handmade by people with disabilities and other vulnerable groups, and sell them at a fair price to improve their health and livelihoods.</p>
+          </li>
+          <li>
+            <p class="zh">确保每一位生产者，不论能力如何，都有机会做出健康的选择，发挥最大的潜能。</p>
+            <p class="en">Make sure every producer, whatever their ability, can make healthy choices and reach their full potential.</p>
+          </li>
+          <li>
+            <p class="zh">力求以平等、包容、尊重和友爱，服务每一个人。</p>
+            <p class="en">Serve everyone with equality, inclusion, respect and kindness.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sub">
+        <h3>我看到的<em>What I saw</em></h3>
+        <div class="pair">
+          <p class="zh">他们是真的做到了。每一件作品都有做它的人，每位手艺人都有一张名片，上面写着自己的介绍和故事。结账的叔叔面对一大片名片，一下子就能找出这件东西的制作者。</p>
+          <p class="en">They truly live up to it. Every piece has a maker, and every maker has a card with their introduction and story. Faced with a whole wall of cards, the man at the till found the maker of my piece at once.</p>
+        </div>
+        <div class="pair">
+          <p class="zh">门口坐轮椅的叔叔，从我进来起就一直一丝不苟地拿着锤子和钉子，一点一点敲着陶板，做精美的垫片。那匹马图案的，就是他做的。</p>
+          <p class="en">By the door, a man in a wheelchair worked with a hammer and nails, tapping a clay plate bit by bit, from the moment I walked in until I left. He makes the lovely coasters, and the one with the horse is his.</p>
+        </div>
+        <div class="pair">
+          <p class="zh">店里有几张座位，整体很温馨。桌上放着几本留言册，写满了来自四面八方的人留下的话，每一页都满满的，像是各地的人给小店的爱。门外的书架上是大家捐出的二手物品，多是二手书，自由捐赠，按需取用。</p>
+          <p class="en">There are a few seats inside, and the whole place feels warm. On the tables lie several guest notebooks, their pages crammed with words from people all over, like love sent in from everywhere. On the shelf outside are secondhand things donated by visitors, mostly books: give freely, take what you need.</p>
+        </div>
+      </div>
+
+      <div class="pull">
+        <p class="zh">这是一个充满爱心的地方，有时间的话，欢迎多去逛逛。</p>
+        <p class="en">It is a place full of love. If you have time, do go and wander around.</p>
+      </div>
+      <p class="byline">— Julia</p>
+      </details>
+    </div>
+  </section>
+
+  <svg class="meadow" aria-hidden="true"><use href="#meadow"/></svg>
+
+  <section class="block" id="visit-tianyun">
+    <div class="wrap">
+      <div class="head"><span class="label">Visit</span><h2>探访天云</h2></div>
+
+      <ul class="tiles" aria-label="北京天云助残疾人康复中心做手工皂的照片 / Photos of making handmade soap at Beijing Tianyun">
+        <li class="tall"><img src="tianyun-1.jpg" alt="手工皂制作的四张照片：倒皂液、成品皂、包装好的皂 / Four photos: pouring soap, finished soaps, wrapped soaps" loading="lazy"></li>
+        <li class="tall"><img src="tianyun-2.jpg" alt="一位小朋友在蓝色桌子上整理做好的手工皂 / A child sorting finished handmade soaps on a blue table" loading="lazy"></li>
+        <li><img src="tianyun-3.jpg" alt="往锅里倒入皂基 / Pouring soap base into the pot" loading="lazy"></li>
+        <li><img src="tianyun-4.jpg" alt="一边搅拌一边融化皂液 / Stirring the melted soap" loading="lazy"></li>
+        <li><img src="tianyun-5.jpg" alt="用小勺舀起皂液 / Scooping up the soap liquid" loading="lazy"></li>
+        <li class="wide"><img src="tianyun-6.jpg" alt="一排排模具里倒好了皂液 / A row of molds filled with soap" loading="lazy"></li>
+        <li class="wide"><img src="tianyun-7.jpg" alt="脱模前的花朵形和椭圆形手工皂 / Flower and oval soaps in their molds" loading="lazy"></li>
+      </ul>
+      <p class="puzzle-cap zh">北京天云助残疾人康复中心里，大家一起做手工皂<span class="en">Making handmade soap together at Beijing Tianyun, a rehabilitation center for people with disabilities</span></p>
+
+      <details class="story">
+      <summary>
+        <span class="on-closed">点击了解天云 <em>Read about Tianyun</em></span>
+        <span class="on-open">收起 <em>Close</em></span>
+        <svg class="chev" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg>
+      </summary>
+
+      <div class="pair">
+        <p class="zh">北京天云助残疾人康复中心在北京市房山区。照片里，大家正在一起做手工皂：把皂基融化，调好颜色，倒进各种形状的模具，等它凝固，再一块一块包好。</p>
+        <p class="en">Beijing Tianyun, a rehabilitation center for people with disabilities, is in Fangshan District, Beijing. In these photos everyone is making handmade soap together: melting the base, mixing in color, pouring it into molds of all shapes, waiting for it to set, and wrapping each piece by hand.</p>
+      </div>
+
+      <div class="sub">
+        <h3>改善孤残孩子的住宿环境<em>Improving the children's housing</em></h3>
+        <div class="pull">
+          <p class="zh">为改善孤残孩子的住宿环境，恳请各位爱心人士伸出援手，一起守护孤残孩子。</p>
+          <p class="en">To improve the living quarters of orphaned and disabled children, we sincerely ask kind-hearted people to lend a hand and protect these children together.</p>
+        </div>
+        <div class="pair">
+          <p class="zh">善款捐到北京乐予慈善基金会，请务必备注：<b>天云改善孤残孩子住宿环境</b>。如果忘了备注，请尽快来信告诉我们。想了解具体的捐款方式，请发邮件到 <a href="mailto:ensoinitiative@outlook.com">ensoinitiative@outlook.com</a>，我们会把基金会的官方信息发给你。</p>
+          <p class="en">Donations go to the Beijing Leyu Charity Foundation. Please be sure to add this note: “Tianyun: improving housing for orphaned and disabled children.” If you forget the note, write to us as soon as you can. To learn how to donate, email us at the address above and we will send you the foundation's official details.</p>
+        </div>
+      </div>
+      </details>
     </div>
   </section>
 
